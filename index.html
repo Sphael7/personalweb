@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHDEV | Indonesian Helper Developer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+        
+        ::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; background-color: #0a0a0a; color: white; overflow-x: hidden; }
+        
+        .glow-bg {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(10,10,10,0) 70%);
+            top: -200px; left: -200px; z-index: -1; filter: blur(50px);
+        }
+        .glow-bg-2 {
+            position: absolute; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(10,10,10,0) 70%);
+            bottom: 10%; right: -100px; z-index: -1; filter: blur(60px);
+        }
+    </style>
+</head>
+<body class="font-inter antialiased relative selection:bg-gold selection:text-black">
+    <div class="glow-bg"></div>
+    <div class="glow-bg-2"></div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-12 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="font-syne text-2xl font-bold tracking-tighter text-white">
+                IH<span class="text-gold">DEV</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#home" class="hover:text-gold transition-colors">Beranda</a>
+                <a href="#services" class="hover:text-gold transition-colors">Layanan</a>
+                <a href="#process" class="hover:text-gold transition-colors">Proses</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Kontak</a>
+            </div>
+            <a href="https://wa.me/6285121592796?text=Halo%20IHDEV,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20websitenya" class="px-5 py-2 bg-white/10 hover:bg-gold border border-white/10 hover:border-gold rounded-full text-sm font-semibold transition-all">
+                Mulai Proyek
+            </a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative pt-20">
+        <h2 class="font-syne text-gold tracking-[0.3em] text-xs md:text-sm mb-4 opacity-0 translate-y-10 hero-sub-title">INDONESIAN HELPER DEVELOPER</h2>
+        <h1 class="hero-text font-syne text-5xl md:text-8xl font-extrabold tracking-tighter mb-6 opacity-0 translate-y-10">
+            IH<span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">DEV</span>
+        </h1>
+        <p class="hero-subtext text-gray-400 text-base md:text-xl max-w-2xl font-light opacity-0 translate-y-10 leading-relaxed">
+            Jasa Membangun Website untuk membantu UMKM dan Perusahaan Lokal menembus era digital dengan tampilan premium dan performa maksimal.
+        </p>
+        <a href="#services" class="hero-btn mt-10 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gold hover:text-white transition-all duration-300 transform hover:scale-105 opacity-0">
+            Lihat Penawaran
+        </a>
+    </section>
+
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 opacity-0 js-fade-in">
+            <h2 class="font-syne text-4xl md:text-5xl font-bold mb-4">Paket Layanan</h2>
+            <p class="text-gray-400">Website kustom dengan kode murni, tanpa template pasaran.</p>
+        </div>
+        
+        <div class="flex overflow-x-auto md:grid md:grid-cols-4 gap-6 pb-10 snap-x snap-mandatory">
+            <div class="service-card min-w-[85vw] md:min-w-0 flex-shrink-0 snap-center bg-white/10 backdrop-blur-lg border border-gold/50 p-8 rounded-3xl relative overflow-hidden transform transition-all hover:-translate-y-2 opacity-0">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-yellow-200"></div>
+                <h3 class="font-syne text-2xl font-bold mb-2">Paket Lengkap</h3>
+                <p class="text-3xl font-bold text-gold mb-6">Rp150.000</p>
+                <ul class="text-gray-300 text-sm space-y-4 mb-8">
+                    <li>✦ One Page Website</li>
+                    <li>✦ Hosting Vercel</li>
+                    <li>✦ Source Code GitHub</li>
+                    <li>✦ 3x Perbaikan Revisi</li>
+                </ul>
+            </div>
+
+            <div class="service-card min-w-[85vw] md:min-w-0 flex-shrink-0 snap-center bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl transform transition-all hover:-translate-y-2 opacity-0">
+                <h3 class="font-syne text-2xl font-bold mb-2 text-gray-200">Paket Setengah</h3>
+                <p class="text-3xl font-bold text-white mb-6">Rp90.000</p>
+                <ul class="text-gray-400 text-sm space-y-4 mb-8">
+                    <li>✦ One Page Website</li>
+                    <li>✦ Hosting Vercel</li>
+                    <li>✦ 2x Perbaikan Revisi</li>
+                </ul>
+            </div>
+
+            <div class="service-card min-w-[85vw] md:min-w-0 flex-shrink-0 snap-center bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl transform transition-all hover:-translate-y-2 opacity-0">
+                <h3 class="font-syne text-2xl font-bold mb-2 text-gray-200">Murah Meriah</h3>
+                <p class="text-3xl font-bold text-white mb-6">Rp50.000</p>
+                <ul class="text-gray-400 text-sm space-y-4 mb-8">
+                    <li>✦ One Page Website</li>
+                    <li>✦ 2x Perbaikan Revisi</li>
+                </ul>
+            </div>
+
+            <div class="service-card min-w-[85vw] md:min-w-0 flex-shrink-0 snap-center bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl transform transition-all hover:-translate-y-2 opacity-0">
+                <h3 class="font-syne text-2xl font-bold mb-2 text-gray-200">Individual</h3>
+                <p class="text-xl font-bold text-white mb-6">Satuan</p>
+                <ul class="text-gray-400 text-xs space-y-3 mb-8 pt-4 border-t border-white/10">
+                    <li class="flex justify-between"><span>Web 1 Halaman</span> <span class="text-white">Rp40k</span></li>
+                    <li class="flex justify-between"><span>Tambah Halaman</span> <span class="text-white">Rp30k</span></li>
+                    <li class="flex justify-between"><span>Perbaikan Bug</span> <span class="text-white">Rp5k/bug</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 px-6 bg-white/5 border-y border-white/10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-syne text-4xl md:text-5xl font-bold mb-16 text-center opacity-0 js-fade-in">Alur Kerja</h2>
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-white/10">
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group process-step opacity-0">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#0a0a0a] bg-gold text-[#0a0a0a] font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-[0_0_15px_rgba(212,175,55,0.4)]">1</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl"><h3 class="font-syne text-xl font-bold mb-1 text-gold">Diskusi</h3><p class="text-gray-400 text-sm">Briefing konsep dan kebutuhan fitur website.</p></div>
+                </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group process-step opacity-0">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#0a0a0a] bg-white text-[#0a0a0a] font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl"><h3 class="font-syne text-xl font-bold mb-1 text-white">Development</h3><p class="text-gray-400 text-sm">Proses coding dengan HTML/Tailwind sesuai pesanan.</p></div>
+                </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group process-step opacity-0">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#0a0a0a] bg-white text-[#0a0a0a] font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl"><h3 class="font-syne text-xl font-bold mb-1 text-white">Review</h3><p class="text-gray-400 text-sm">Penyesuaian desain dan perbaikan bug jika ada.</p></div>
+                </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group process-step opacity-0">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#0a0a0a] bg-gold text-[#0a0a0a] font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-[0_0_15px_rgba(212,175,55,0.4)]">4</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl border-gold/30"><h3 class="font-syne text-xl font-bold mb-1 text-gold">Launch</h3><p class="text-gray-400 text-sm">Website online dan penyerahan aset atau source code.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 max-w-4xl mx-auto text-center">
+        <div class="bg-gradient-to-b from-white/10 to-transparent border border-white/10 p-10 md:p-16 rounded-[2rem] opacity-0 js-fade-in">
+            <h2 class="font-syne text-4xl md:text-5xl font-bold mb-8">Hubungi IHDEV</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <a href="mailto:ihdevindo@gmail.com" class="flex items-center gap-3 text-gray-300 hover:text-gold transition-colors text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    ihdevindo@gmail.com
+                </a>
+                <a href="https://wa.me/6285121592796" class="flex items-center gap-3 text-gray-300 hover:text-gold transition-colors text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    0851-2159-2796
+                </a>
+            </div>
+            <a href="https://wa.me/6285121592796?text=Halo%20IHDEV,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20websitenya..." target="_blank" class="inline-flex items-center gap-4 px-12 py-5 bg-gold text-black font-bold text-xl rounded-full hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                Chat via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-xs text-gray-600">© 2026 Indonesian Helper Developer.</footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        document.querySelectorAll('nav a, .hero-btn').forEach(el => {
+            el.addEventListener('click', (e) => {
+                const target = el.getAttribute('href');
+                if(target.startsWith('#')) {
+                    e.preventDefault();
+                    lenis.scrollTo(target, { offset: -80 });
+                }
+            });
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+        const tl = gsap.timeline();
+        tl.to(".hero-sub-title", { y: 0, opacity: 1, duration: 1, ease: "power4.out" })
+          .to(".hero-text", { y: 0, opacity: 1, duration: 1, ease: "power4.out" }, "-=0.8")
+          .to(".hero-subtext", { y: 0, opacity: 1, duration: 1, ease: "power4.out" }, "-=0.8")
+          .to(".hero-btn", { opacity: 1, duration: 1 }, "-=0.5");
+
+        gsap.utils.toArray('.js-fade-in').forEach(el => {
+            gsap.to(el, { scrollTrigger: { trigger: el, start: "top 85%" }, y: 0, opacity: 1, duration: 1 });
+        });
+
+        gsap.to(".service-card", { scrollTrigger: { trigger: "#services", start: "top 70%" }, y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.7)" });
+        gsap.to(".process-step", { scrollTrigger: { trigger: "#process", start: "top 60%" }, y: 0, opacity: 1, duration: 0.8, stagger: 0.2 });
+    </script>
+</body>
+</html>
